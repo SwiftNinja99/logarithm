@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Logarithm Properties</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<script>
+			function show(id) {
+				const pTags = document.getElementsByTagName('p');
+				for (let i = 0; i < pTags.length; i++) {
+					pTags[i].style.display = pTags[i].id === id ? 
+					"block" : 
+					"none"; 
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1 align="center">Logarithms</h1>
+			</div>
+			<div id="content">
+				<p id="log">
+					The exponent that a specific base must be raised to in order to get a certain value.
+					<br>log<sub>2</sub> 8 = 3
+					<br>log<sub>3</sub> 9 = 2
+					<br>log<sub>10</sub> 10000 = 4
+				</p>
+				<p id="product" style="display: none">
+					Product Property: The logarithm of a product is equal to the sum of the logarithms of its factors
+					<br>log<sub>2</sub> (4*2) = log<sub>2</sub> 4 + log<sub>2</sub> 2
+					<br>log<sub>3</sub> (6*5) = log<sub>3</sub> 6 + log<sub>3</sub> 5
+					<br>log (100*5) = log 100 + log 5
+				</p>
+				<p id="quotient" style="display: none">
+					Quotient Property: The logarithm of a quotient is the logarithm of the divident minus the logarithm of the divisor
+					<br>log<sub>2</sub> (64/8) = log<sub>2</sub> 64 - log<sub>2</sub> 8
+					<br>log<sub>6</sub> (36/6) = log<sub>6</sub> 36 - log<sub>6</sub> 6
+					<br>log<sub>12</sub> (25/5) = log<sub>12</sub> 25 - log<sub>12</sub> 5
+				</p>
+				<p id="power" style="display: none">
+					Power Property: The logarithm of a power is the product of the exponent and the logarithm of the base
+					<br>log<sub>32</sub> 28<sup>64</sup> = 64 * log<sub>32</sub> 28
+					<br>log<sub>2</sub> 4<sup>3</sup> = 3 * log<sub>2</sub> 4
+					<br>log<sub>94</sub> 23<sup>47</sup> = 47 * log<sub>94</sub> 4
+				</p>
+				<p id="inverse" style="display: none">
+					Inverse Property: If the logarithm's base is the same as the number itself, then they cancel out and drop the exponent down
+					<br>log<sub>2</sub> 2<sup>4</sup> = 4
+					<br>log<sub>5</sub> 5<sup>7</sup> = 7
+					<br>log<sub>12</sub> 12<sup>34</sup> = 34
+				</p>
+				<p id="changebase" style="display: none">
+					Change of Base Formula: Formula that converts a logarithm to base 10 or base <i>e</i>
+					<br>log<sub>2</sub> 7 = (log<sub>10</sub> 7)/(log<sub>10</sub> 2)
+					<br>log<sub>5</sub> 8 = (log<sub>10</sub> 8)/(log<sub>10</sub> 5)
+					<br>log<sub>6</sub> 9 = (log<sub>10</sub> 9)/(log<sub>10</sub> 6)
+				</p>
+			</div>
+			<div id="sidebar">
+				<br>
+				<button onClick="show('log')">Definiton</button><br>
+				<button onClick="show('product')">Product Property</button><br>
+				<button onClick="show('quotient')">Quotient Property</button><br>
+				<button onClick="show('power')">Power Property</button><br>
+				<button onClick="show('inverse')">Inverse Property</button><br>
+				<button onClick="show('changebase')">Change of Base Formula</button><br>
+			</div>
+		</div>
